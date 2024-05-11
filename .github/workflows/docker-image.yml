@@ -39,7 +39,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            linzeliang1222/dailyhot-api
+            linzeliang1222/minimalist-web-notepad
             ghcr.io/${{ github.repository }}
 
       - name: Build and push Docker image
