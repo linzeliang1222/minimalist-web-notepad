@@ -12,6 +12,9 @@ COPY .htaccess index.php styles.css script.js favicon.ico favicon.svg notes.htac
 # Delete apt cache files
 RUN rm -rf /var/lib/apt/lists/*
 
+# Set ServerName
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 # Set entrypoint for permissions
 COPY minimalist-web-notepad-entrypoint /usr/local/bin/
 ENTRYPOINT ["minimalist-web-notepad-entrypoint"]
