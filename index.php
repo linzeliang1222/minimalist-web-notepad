@@ -9,6 +9,8 @@ $base_url = getenv('MWN_BASE_URL') ?: '';
 //$save_path = '_tmp';
 $save_path = getenv('MWN_SAVE_PATH') ?: '_tmp';
 
+$analytics_tag = getenv('ANALYTICS_TAG') ?: '';
+
 // Disable caching.
 header('Cache-Control: no-store');
 
@@ -53,6 +55,7 @@ if (isset($_GET['raw']) || strpos($_SERVER['HTTP_USER_AGENT'], 'curl') === 0 || 
     <link rel="icon" href="<?php print $base_url; ?>/favicon.ico" sizes="any">
     <link rel="icon" href="<?php print $base_url; ?>/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="<?php print $base_url; ?>/styles.css">
+    <?php print $analytics_tag; ?>
 </head>
 <body>
     <div class="container">
