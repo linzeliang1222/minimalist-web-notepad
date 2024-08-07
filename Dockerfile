@@ -7,7 +7,7 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 RUN a2enmod rewrite
  
 # Import App
-COPY .htaccess index.php styles.css script.js favicon.ico favicon.svg notes.htaccess ./
+COPY .htaccess index.php favicon.ico favicon.svg notes.htaccess ./
 
 # Delete apt cache files
 RUN rm -rf /var/lib/apt/lists/*

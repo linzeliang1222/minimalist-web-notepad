@@ -6,14 +6,11 @@ See demo at https://notes.orga.cat or https://notes.orga.cat/whatever.
 
 ## Installation
 
-At the top of `index.php` file, change `$base_url` variable to point to your
-site.
-
 Make sure the web server is allowed to write to the `_tmp` directory.
 
 ### On Apache
 
-You may need to enable mod_rewrite and set up `.htaccess` files in your site configuration.
+You may need to enable mod_rewrite and allow `.htaccess` files in your site configuration.
 See [How To Set Up mod_rewrite for Apache](https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04).
 
 ### On Nginx
@@ -58,11 +55,6 @@ Save the content of a local file (e.g., `/etc/hosts`) to a note:
 ```
 cat /etc/hosts | curl https://example.com/notes/hosts --data-binary @-
 ```
-
-## Other examples
-
-There are git branches with examples using [Docker](https://github.com/pereorga/minimalist-web-notepad/tree/docker) and the [Web Crypto API](https://github.com/pereorga/minimalist-web-notepad/tree/encryption).
-
 
 ## Copyright and license
 
